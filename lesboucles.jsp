@@ -11,15 +11,16 @@
     <input type="submit" value="Afficher">
 </form>
 
-<h2>Exercice 1 : Le carré d'étoiles</h2>
-<p>Ecrire le code afin de produire un carré d'étoile</p>
-
 <%-- Récupération de la valeur saisie par l'utilisateur --%>
 <% String valeur = request.getParameter("valeur"); %>
     
 <%-- Vérification de l'existence de la valeur --%>
 <% if (valeur != null && !valeur.isEmpty()) { %>
    <% int cpt = Integer.parseInt(valeur); %>
+
+<h2>Exercice 1 : Le carré d'étoiles</h2>
+<p>Ecrire le code afin de produire un carré d'étoile</p>
+
 
 <%-- Boucle for pour afficher un carré d'étoiles --%>
    
@@ -34,14 +35,7 @@
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 
-<%-- Récupération de la valeur saisie par l'utilisateur --%>
-<% String valeur = request.getParameter("valeur"); %>
-    
-<%-- Vérification de l'existence de la valeur --%>
-<% if (valeur != null && !valeur.isEmpty()) { %>
-   <% int cpt = Integer.parseInt(valeur); %>
-
-<%-- Boucle for pour afficher un carré d'étoiles --%>
+<%-- Boucle for pour afficher un Triangle rectangle gauche --%>
    
     <% for (int i = 1; i <= cpt; i++) { %>
        <p>
