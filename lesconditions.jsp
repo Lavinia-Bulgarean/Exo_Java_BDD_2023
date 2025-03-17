@@ -32,14 +32,9 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
         <%-- Condition if pour comparer les valeurs --%>
         <% if ((C > A && C < B) || (C > B && C < A)) { %>
             <p>Oui, C est compris entre A et B.</p>
-       <% 
-            } else { 
-    %>
+       <%  } else { %>
                 <p>Non, C n'est pas compris entre A et B.</p>
-    <% 
-            } 
-        } 
-    %>
+    <% }  %>
    
     
 
