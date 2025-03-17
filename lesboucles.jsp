@@ -63,6 +63,7 @@
     <% for (int i = 1; i <= cpt; i++) { %>
        <p>
        <% for (int j = 0; j < cpt - i; j++) { %>
+          &nbsp;
        <% } %>
        <% for (int m = 0; m < i; m++) {%>
 
