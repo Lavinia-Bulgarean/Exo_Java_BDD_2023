@@ -31,7 +31,7 @@
     <% } %>
 <% } %>
     
-<h2>Exercice 1 : Comparaison 1</h2>
+<h2>Exercice 1 : Comparaison </h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 <form action="#" method="post">
@@ -59,9 +59,9 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
         }
         
         if (c >= min && c <= max) {
-            out.println("<p>Oui, C est compris entre A et B</p>");
+            out.println("<p>C est compris entre A et B</p>");
         } else {
-            out.println("<p>Non, C n'est pas compris entre A et B</p>");
+            out.println("<p>C n'est pas compris entre A et B</p>");
         }
     }
 %>
