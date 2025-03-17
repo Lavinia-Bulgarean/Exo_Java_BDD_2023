@@ -9,11 +9,6 @@
 <h2>Exercice 1 : Comparaison 1</h2>
 <p>Ecrire un programme qui demande à l'utilisateur de saisir 3 valeurs (des chiffres),</br>
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
-Exemple :</br>
-A = 10</br>
-B = 20</br>
-C = 15</br>
-Oui C est compris entre A et B</p>
 
 <form action="#" method="post">
 <p>Saisir la valeur A : <input type="number" name="valeurA" required></p>
@@ -37,11 +32,14 @@ Oui C est compris entre A et B</p>
         <%-- Condition if pour comparer les valeurs --%>
         <% if ((C > A && C < B) || (C > B && C < A)) { %>
             <p>Oui, C est compris entre A et B.</p>
-        <% } else if (intValeurA < intValeurB) { %>
-            <p>Valeur A est inférieure à Valeur B.</p>
-        <% } else { %>
-            <p>Valeur A est égale à Valeur B.</p>
-        <% } %>
+       <% 
+            } else { 
+    %>
+                <p>Non, C n'est pas compris entre A et B.</p>
+    <% 
+            } 
+        } 
+    %>
    
     
 
