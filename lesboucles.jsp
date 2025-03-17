@@ -94,26 +94,6 @@
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
 <%-- Boucle for pour afficher un demi losange --%>
-<% for (int i = 1; i <= n; i++) { %>
-            <p>
-            <% for (int j = 0; j < n - i; j++) { %>
-                &nbsp;
-            <% } %>
-            <% for (int k = 0; k < i; k++) { %>
-                *
-            <% } %>
-            </p>
-        <% } %>
-        <% for (int i = n; i > 0; i--) { %>
-            <p>
-            <% for (int j = 0; j < n - i; j++) { %>
-                &nbsp;
-            <% } %>
-            <% for (int k = 0; k < i; k++) { %>
-                *
-            <% } %>
-            </p>
-        <% } %>
 
  <% for (int i = 1; i <= cpt; i++) { %>
             <p>
