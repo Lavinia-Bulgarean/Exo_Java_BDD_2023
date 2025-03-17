@@ -35,75 +35,59 @@
 A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 
 <%-- Formulaire pour la comparaison des valeurs --%>
-    <form action="#" method="post">
-        <p>Saisir la valeur A : <input type="number" name="valeurA" required></p>
-        <p>Saisir la valeur B : <input type="number" name="valeurB" required></p>
-        <p>Saisir la valeur C : <input type="number" name="valeurC" required></p>
-        <p><input type="submit" value="Vérifier"></p>
-    </form>
-
-    <%-- Récupération des valeurs A, B et C --%>
-    <% 
-        String valeurA = request.getParameter("valeurA");
-        String valeurB = request.getParameter("valeurB");
-        String valeurC = request.getParameter("valeurC");
-
-        if (valeurA != null && valeurB != null && valeurC != null) { 
-           try {
-            int A = Integer.parseInt(valeurA);
-            int B = Integer.parseInt(valeurB);
-            int C = Integer.parseInt(valeurC);
-
-            if ((C > A && C < B) || (C > B && C < A)) { 
-    %>
-                <p>Oui, C est compris entre A et B.</p>
-    <% 
-            } else { 
-    %>
-                <p>Non, C n'est pas compris entre A et B.</p>
-    <% 
-            } 
-        } catch (NumberFormatException e) {
-    %>
-            <p>Veuillez entrer des valeurs numériques valides pour A, B et C.</p>
-    <% 
-            }
+<form action="#" method="post">
+    <p>Saisir A : <input type="text" name="A"></p>
+    <p>Saisir B : <input type="text" name="B"></p>
+    <p>Saisir C : <input type="text" name="C"></p>
+    <p><input type="submit" value="Vérifier"></p>
+</form>
+<%
+    String A = request.getParameter("A");
+    String B = request.getParameter("B");
+    String C = request.getParameter("C");
+    if (A != null && B != null && C != null && !A.isEmpty() && !B.isEmpty() && !C.isEmpty()) {
+        int a = Integer.parseInt(A);
+        int b = Integer.parseInt(B);
+        int c = Integer.parseInt(C);
+        int min, max;
+        
+        if (a < b) {
+            min = a;
+            max = b;
+        } else {
+            min = b;
+            max = a;
         }
-    %>
-
+        
+        if (c >= min && c <= max) {
+            out.println("<p>Oui, C est compris entre A et B</p>");
+        } else {
+            out.println("<p>Non, C n'est pas compris entre A et B</p>");
+        }
+    }
+%>
+</p>
+        
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
 <%-- Formulaire pour vérifier si un nombre est pair ou impair --%>
 <form action="#" method="post">
-    <p>Saisir un nombre : <input type="number" name="nombre" required></p>
+    <p>Saisir un nombre : <input type="text" name="nombre"></p>
     <p><input type="submit" value="Vérifier"></p>
 </form>
-
-<%-- Récupération du nombre et vérification pair ou impair --%>
-<% 
-    String nombreStr = request.getParameter("nombre");
-
-    if (nombreStr != null) { 
-       try {
-            int nombre = Integer.parseInt(nombreStr);
-
-            if (nombre % 2 == 0) { 
-    %>
-            <p>Le nombre <%= nombre %> est pair.</p>
-    <% 
-        } else { 
-    %>
-             <p>Le nombre <%= nombre %> est impair.</p>
-    <% 
-            } 
-        } catch (NumberFormatException e) {
-    %>
-            <p>Veuillez entrer un nombre valide.</p>
-    <% 
-            }
+<%
+    String nombre = request.getParameter("nombre");
+    if (nombre != null && !nombre.isEmpty()) {
+        int num = Integer.parseInt(nombre);
+        if (num % 2 == 0) {
+            out.println("<p>Le nombre est pair.</p>");
+        } else {
+            out.println("<p>Le nombre est impair.</p>");
         }
-    %>
+    }
+%>
+</p>
 
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
