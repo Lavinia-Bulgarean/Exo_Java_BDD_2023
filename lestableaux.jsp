@@ -81,7 +81,7 @@ Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'ut
         }
     }
  %>
-<p>la valeur la plus proche de 0 : <%= plusProcheDeZero %
+<p>la valeur la plus proche de 0 : <%= plusProcheDeZero %></p>
 
 
 <h2>Exercice 7 : La valeur le plus proche de 0 (2° version)</h2>
