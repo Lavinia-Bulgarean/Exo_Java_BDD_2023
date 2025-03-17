@@ -103,8 +103,7 @@
             <% for (int m = 0; m < i; m++) { %>
                <%= "*" %> 
             <% } %>
-           <br>
-          &nbsp;
+               &nbsp;
         <% } %>
         <% for (int i = cpt; i > 0; i--) { %>
             <p>
