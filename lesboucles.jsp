@@ -22,7 +22,6 @@
    <% int cpt = Integer.parseInt(valeur); %>
 
 <%-- Boucle for pour afficher un carré d'étoiles --%>
-    <%int cpt = Integer.parseInt(valeur); %>
    
     <% for (int i = 0; i < cpt; i++) { %>
        <p>
