@@ -17,12 +17,14 @@
 <% String valeur = request.getParameter("valeur"); %>
     
 <%-- Vérification de l'existence de la valeur --%>
-<% if (valeur != null && !valeur.isEmpty()) { %>
+<% if (valeur != null && !valeur.isEmpty()) { 
+    int cpt = Integer.parseInt(valeur);%>
 
-<%-- Boucle for pour afficher une ligne d'étoiles --%>
+<%-- Boucle for pour afficher un carré d'étoiles --%>
     <%int cpt = Integer.parseInt(valeur); %>
     <p>
-    <% for (int i = 1; i <= cpt; i++) { %>
+    <% for (int i = 0; i < cpt; i++) {
+        for (int j = 0; j < cpt; j++) %>
        <%= "*" %>
     <% } %>
     </p>
