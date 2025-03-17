@@ -35,9 +35,27 @@
     int somme = premierChiffre + deuxiemeChiffre;
 %>
 <p>La somme de <%= premierChiffre %> et <%= deuxiemeChiffre %> est : <%= somme %></p>
+
 <h2>Exercice 3 : La somme de toutes les valeurs</h2>
 <p>L'utilisateur peut à présent saisir autant de valeurs qu'il le souhaite dans champs de saisie.</br>
 Ecrire un programme afin de faire la somme de toutes les valeurs saisie par l'utilisateur</p>
+<form action="#" method="post">
+    <p>Saisir de valeurs: <input type="text" id="inputValeursMultiples" name="valeursMultiples"></p>
+    <p><input type="submit" value="Calculer la somme"></p>
+</form>
+<% String valeursMultiples = request.getParameter("valeursMultiples"); %>
+<% if (valeursMultiples != null && !valeursMultiples.isEmpty()) { %>
+    <% String[] tableauValeursMultiples = valeursMultiples.split("\\s+"); %>
+    <%
+       int sommeTotale = 0;
+       for (String valeur : tableauValeursMultiples) {
+            sommeTotale += Integer.parseInt(valeur);
+       }
+    %>
+    <p>La somme de toutes les valeurs est : <%= sommeTotale %></p>
+<% } %>
+
+
 
 <h2>Exercice 4 : La valeur maximum</h2>
 <p>Ecrire un programme pour afficher la valeur maximale saisie par l'utilisateur</p>
