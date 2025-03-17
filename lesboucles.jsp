@@ -20,8 +20,6 @@
 
 <h2>Exercice 1 : Le carré d'étoiles</h2>
 <p>Ecrire le code afin de produire un carré d'étoile</p>
-
-
 <%-- Boucle for pour afficher un carré d'étoiles --%>
    
     <% for (int i = 0; i < cpt; i++) { %>
@@ -34,7 +32,6 @@
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
-
 <%-- Boucle for pour afficher un Triangle rectangle gauche --%>
    
     <% for (int i = 1; i <= cpt; i++) { %>
@@ -47,8 +44,17 @@
 
 <h2>Exercice 3 : Triangle rectangle inversé</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
-<p>Exemple si l'utilisateur saisie le valeur 5</p>
-<p>*****</br>****</br>***</br>**</br>*</p>
+<%-- Boucle for pour afficher un Triangle rectangle inversé --%>
+   
+    <% for (int i = cpt; i > 0; i--) { %>
+       <p>
+       <% for (int j = 0; j < i; j++) { %>
+      <%= "*" %>
+    <% } %>
+    </p>
+ <% } %>
+
+
 
 <h2>Exercice 4 : Triangle rectangle 2</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
