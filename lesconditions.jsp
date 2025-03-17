@@ -70,24 +70,24 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
 
 <%-- Formulaire pour vérifier si un nombre est pair ou impair --%>
 <form action="#" method="post">
-<p>Saisir un nombre : <input type="number" name="nombre" required></p>
-<p><input type="submit" value="Vérifier"></p>
-    </form>
+    <p>Saisir un nombre : <input type="number" name="nombre" required></p>
+    <p><input type="submit" value="Vérifier"></p>
+</form>
 
-    <%-- Récupération du nombre et vérification pair ou impair --%>
-    <% 
-        String nombreStr = request.getParameter("nombre");
+<%-- Récupération du nombre et vérification pair ou impair --%>
+<% 
+    String nombreStr = request.getParameter("nombre");
 
-        if (nombreStr != null) { 
-            int nombre = Integer.parseInt(nombreStr);
+    if (nombreStr != null) { 
+        int nombre = Integer.parseInt(nombreStr);
 
-            if (nombre % 2 == 0) { 
+        if (nombre % 2 == 0) { 
     %>
-                <p>Le nombre <%= nombre %> est pair.</p>
+            <p>Le nombre <%= nombre %> est pair.</p>
     <% 
-            } else { 
+        } else { 
     %>
-                <p>Le nombre <%= nombre %> est impair.</p>
+             <p>Le nombre <%= nombre %> est impair.</p>
     <% 
             } 
         } 
