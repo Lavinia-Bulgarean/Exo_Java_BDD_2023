@@ -49,6 +49,7 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
         String valeurC = request.getParameter("valeurC");
 
         if (valeurA != null && valeurB != null && valeurC != null) { 
+           try {
             int A = Integer.parseInt(valeurA);
             int B = Integer.parseInt(valeurB);
             int C = Integer.parseInt(valeurC);
@@ -62,7 +63,12 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
                 <p>Non, C n'est pas compris entre A et B.</p>
     <% 
             } 
-        } 
+        } catch (NumberFormatException e) {
+    %>
+            <p>Veuillez entrer des valeurs numériques valides pour A, B et C.</p>
+    <% 
+            }
+        }
     %>
 
 <h2>Exercice 2 : Pair ou Impair ?</h2>
@@ -79,9 +85,10 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
     String nombreStr = request.getParameter("nombre");
 
     if (nombreStr != null) { 
-        int nombre = Integer.parseInt(nombreStr);
+       try {
+            int nombre = Integer.parseInt(nombreStr);
 
-        if (nombre % 2 == 0) { 
+            if (nombre % 2 == 0) { 
     %>
             <p>Le nombre <%= nombre %> est pair.</p>
     <% 
@@ -90,8 +97,14 @@ A, B et C et dites nous si la valeur de C est comprise entre A et B.</br>
              <p>Le nombre <%= nombre %> est impair.</p>
     <% 
             } 
-        } 
+        } catch (NumberFormatException e) {
     %>
+            <p>Veuillez entrer un nombre valide.</p>
+    <% 
+            }
+        }
+    %>
+
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
