@@ -24,9 +24,9 @@
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 <%
-    int premiervaleur = Integer.parseInt(tableauDeChiffres[0]);
-    int carre = premiervaleur * premiervaleur;
-%><p>Le carré de <%= premiervaleur %> est : <%= carre %></p>
+    int premierChiffre = Integer.parseInt(tableauDeChiffres[0]);
+    int carre = premierChiffre * premierChiffre;
+%><p>Le carré de <%= premierChiffre %> est : <%= carre %></p>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
